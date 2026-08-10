@@ -1,0 +1,14 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+// Generated stylesheet for ./labs/gb/components/radio/radio.css.
+import { css } from 'lit';
+export const styles = css `/*!
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */@layer md.sys, md.comp.ripple, md.comp.focus-ring;@layer md.comp.radio{.radio{--icon-color: var(--md-sys-color-on-surface-variant);--icon-size: 20px;--state-layer-color: var(--md-sys-color-on-surface);--state-layer-shape: 50%;--state-layer-size: 40px}.radio:where(:hover,.hover){--icon-color: var(--md-sys-color-on-surface)}.radio:where(:focus-within,.focus){--icon-color: var(--md-sys-color-on-surface)}.radio:where(:active,.active){--state-layer-color: var(--md-sys-color-primary)}.radio:is(:checked,.checked){--icon-color: var(--md-sys-color-primary);--state-layer-color: var(--md-sys-color-primary)}.radio:is(:checked,.checked):where(:active,.active){--state-layer-color: var(--md-sys-color-on-surface)}.radio:is(:disabled,.disabled){--icon-color: hsl(from var(--md-sys-color-on-surface) h s l / 38%)}.radio{appearance:none;position:relative;display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background-image:none;outline:none;--icon: "radio_button_unchecked"}.radio::before{content:var(--icon);color:var(--icon-color);font:var(--icon-size)/1 var(--md-icon-font);width:var(--icon-size);aspect-ratio:1}.radio:is(:checked,.checked)::before{--icon: "radio_button_checked"}.radio::after{content:"";position:absolute;aspect-ratio:1;background-image:var(--ripple);color:var(--state-layer-color);width:var(--state-layer-size);border-radius:var(--state-layer-shape);outline:var(--focus-ring-outline);outline-offset:var(--focus-ring-offset);transition:var(--ripple-transition);animation:var(--ripple-animation),var(--focus-ring-animation)}}
+`;
+export default styles.styleSheet;
+//# sourceMappingURL=radio.cssresult.js.map

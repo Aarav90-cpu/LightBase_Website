@@ -1,0 +1,14 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+// Generated stylesheet for ./labs/gb/components/ripple/ripple.css.
+import { css } from 'lit';
+export const styles = css `/*!
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */@layer md.sys;@layer md.comp.ripple{@property --ripple-scale{syntax:"<percentage>";inherits:false;initial-value:0%}@property --ripple-hover-opacity{syntax:"<percentage>";inherits:false;initial-value:0%}@property --ripple-press-opacity{syntax:"<percentage>";inherits:false;initial-value:0%}@property --ripple-x{syntax:"<percentage>";inherits:false;initial-value:50%}@property --ripple-y{syntax:"<percentage>";inherits:false;initial-value:50%}.ripple{--ripple-color: currentColor;--ripple-press-transition: --ripple-press-opacity 375ms linear;--ripple-transition: --ripple-hover-opacity 15ms linear, var(--ripple-press-transition);--ripple-animation: ripple-release 375ms linear;--ripple: radial-gradient( hsl(from var(--ripple-color) h s l / var(--ripple-hover-opacity)) ), radial-gradient( circle at var(--ripple-x) var(--ripple-y), hsl(from var(--ripple-color) h s l / var(--ripple-press-opacity)) var(--ripple-scale), transparent calc(var(--ripple-scale) * 1.35) );background-image:var(--ripple);transition:var(--ripple-transition);animation:var(--ripple-animation),var(--focus-ring-animation, none)}.ripple:is(:hover,.hover),.ripple:has(.ripple-target:hover),.ripple-target:hover .ripple,:host(:hover) .ripple.ripple-host{--ripple-hover-opacity: 8%}.ripple:is(:active,.active),.ripple:has(.ripple-target:active),.ripple-target:active .ripple,:host(:active) .ripple.ripple-host{--ripple-press-opacity: 10%;--ripple-press-transition: --ripple-press-opacity 100ms linear;--ripple-animation: ripple-press forwards 450ms cubic-bezier(0.2, 0, 0, 1)}.ripple:is(:disabled,.disabled){--ripple: none}@keyframes ripple-press{from{--ripple-scale: 20%}to{--ripple-scale: 100%;--ripple-x: 50%;--ripple-y: 50%}}@keyframes ripple-release{from{--ripple-scale: 100%}to{--ripple-scale: 100%}}}
+`;
+export default styles.styleSheet;
+//# sourceMappingURL=ripple.cssresult.js.map

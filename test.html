@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "./node_modules/@material/web/",
+        "lit": "./node_modules/lit/index.js",
+        "lit/": "./node_modules/lit/",
+        "lit-html": "./node_modules/lit-html/lit-html.js",
+        "lit-html/": "./node_modules/lit-html/",
+        "lit-element/": "./node_modules/lit-element/",
+        "@lit/reactive-element": "./node_modules/@lit/reactive-element/reactive-element.js",
+        "@lit/reactive-element/": "./node_modules/@lit/reactive-element/",
+        "@lit/task": "./node_modules/@lit/task/index.js",
+        "@lit/task/": "./node_modules/@lit/task/",
+        "@lit/context": "./node_modules/@lit/context/index.js",
+        "@lit/context/": "./node_modules/@lit/context/",
+        "tslib": "./node_modules/tslib/tslib.es6.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import '@material/web/button/filled-button.js';
+  </script>
+</head>
+<body>
+  <md-filled-button>Test Button</md-filled-button>
+</body>
+</html>

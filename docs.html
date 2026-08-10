@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — LightBase</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  <link href="node_modules/material-icons/iconfont/material-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "./node_modules/@material/web/",
+        "lit": "./node_modules/lit/index.js",
+        "lit/": "./node_modules/lit/",
+        "lit-html": "./node_modules/lit-html/lit-html.js",
+        "lit-html/": "./node_modules/lit-html/",
+        "lit-element/": "./node_modules/lit-element/index.js",
+        "lit-element/": "./node_modules/lit-element/",
+        "@lit/reactive-element": "./node_modules/@lit/reactive-element/reactive-element.js",
+        "@lit/reactive-element/": "./node_modules/@lit/reactive-element/",
+        "@lit/task": "./node_modules/@lit/task/index.js",
+        "@lit/task/": "./node_modules/@lit/task/",
+        "@lit/context": "./node_modules/@lit/context/index.js",
+        "@lit/context/": "./node_modules/@lit/context/",
+        "tslib": "./node_modules/tslib/tslib.es6.js"
+      }
+    }
+  </script>
+  
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <span class="material-icons logo-icon">speed</span>
+      <span class="logo-text">LightBase</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="docs.html" class="active">Documentation</a>
+      <a href="https://github.com/Aarav90-cpu/LightBase" target="_blank">GitHub</a>
+      <div class="header-button">
+        <md-filled-button href="index.html">Back to App</md-filled-button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="docs-layout">
+    <nav class="docs-sidebar">
+      <ul>
+        <li><a href="#getting-started" class="active">Getting Started</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#api-studio">API Studio</a></li>
+        <li><a href="#scripts">Test Scripts</a></li>
+        <li><a href="#sql-console">SQL Console</a></li>
+        <li><a href="#visual-flows">Visual Flows</a></li>
+        <li><a href="#monitors">Monitors</a></li>
+        <li><a href="#ai-companion">AI Companion</a></li>
+        <li><a href="#crypto-vault">Crypto Vault</a></li>
+        <li><a href="#security-hardening">Security Hardening</a></li>
+        <li><a href="#enterprise">Enterprise Engine</a></li>
+      </ul>
+    </nav>
+
+    <main class="docs-content">
+      <h1>LightBase User Guide</h1>
+      <p class="lead">A local-first, multi-protocol API development platform powered by a native C-Core engine.</p>
+
+      <section id="getting-started" class="fade-up">
+        <h2>Getting Started</h2>
+        <h3>Prerequisites</h3>
+        <ul>
+          <li><strong>System packages:</strong> <code>cmake build-essential libssl-dev libsqlite3-dev libgit2-dev</code></li>
+          <li><strong>Build:</strong> <code>make</code> (installs Python deps and builds C-Core)</li>
+          <li><strong>Run:</strong> <code>make run</code> (starts the bridge server and opens the UI)</li>
+          <li><strong>Test:</strong> <code>make test</code> (runs 75 tests across 24 categories)</li>
+        </ul>
+        
+        <h3>100% Local-First Storage</h3>
+        <p>All your data is stored as plain JSON files in <code>workspace/</code>:</p>
+        <pre><code>workspace/
+ collections/    # Saved API requests
+ environments/   # Variable sets
+ history/        # Auto-logged request/response pairs
+ monitors/       # Scheduled run configs
+ flows/          # Visual workflow definitions
+</code></pre>
+        <p><strong>Every file is a plain JSON file you can commit to Git.</strong> No cloud sync needed — just <code>git push</code>.</p>
+      </section>
+
+      <section id="dashboard" class="fade-up">
+        <h2>Dashboard</h2>
+        <p>The Dashboard tab shows real-time system telemetry from the native C-Core.</p>
+        <img src="Photos/Screenshot From 2026-08-10 17-27-13.png" alt="Dashboard" class="docs-image theme-border-green" />
+        <ul>
+          <li><strong>CPU Utilization</strong>: Live percentage with gradient area chart (30-point history)</li>
+          <li><strong>Memory Usage</strong>: Used/Total with animated progress bar</li>
+          <li><strong>Telemetry History</strong>: Read stored binary telemetry snapshots from the C mmap'd ring buffer</li>
+        </ul>
+      </section>
+
+      <section id="api-studio" class="fade-up">
+        <h2>API Studio</h2>
+        <p>The API Studio supports 5 protocols via the protocol selector bar at the top.</p>
+        <img src="Photos/Screenshot From 2026-08-10 17-43-12.png" alt="API Studio" class="docs-image theme-border-blue" />
+        
+        <h3>REST Requests</h3>
+        <ol>
+          <li>Select HTTP method: <strong>GET</strong>, <strong>POST</strong>, <strong>PUT</strong>, <strong>DELETE</strong>, <strong>PATCH</strong></li>
+          <li>Enter URL — supports <code>{{variable}}</code> interpolation</li>
+          <li>Add Headers and Form Data using the buttons</li>
+          <li>Enter JSON Body for POST/PUT/PATCH</li>
+          <li>Click <strong>Send</strong></li>
+        </ol>
+
+        <h3>GraphQL</h3>
+        <p>Enter the GraphQL endpoint hostname and path. Write your query in the Query editor, add variables in the Variables panel (JSON), and click Query.</p>
+        <pre><code>query GetUser($id: ID!) {
+  user(id: $id) {
+    name
+    email
+  }
+}</code></pre>
+      </section>
+
+      <section id="scripts" class="fade-up">
+        <h2>Test Scripts</h2>
+        <p>Write test scripts using the <code>lb.*</code> API that runs after each response:</p>
+        <pre><code>// Named test blocks
+lb.test("Status is 200", () => {
+    lb.expect(lb.response.status).toBe(200);
+});
+
+lb.test("Response has data", () => {
+    const body = lb.response.json();
+    lb.expect(body.url).toBeTruthy();
+});</code></pre>
+      </section>
+
+      <section id="sql-console" class="fade-up">
+        <h2>SQL Console</h2>
+        <p>Execute SQL queries directly against your active database through the C-Core arena allocator:</p>
+        <pre><code>CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE
+);
+
+INSERT INTO users (name, email) VALUES ('Aarav', 'aarav@lightbase.dev');
+SELECT * FROM users;</code></pre>
+      </section>
+
+      <section id="visual-flows" class="fade-up">
+        <h2>Visual Flows</h2>
+        <p>Build complex, multi-step API workflows visually using nodes like <strong>Request</strong>, <strong>Condition</strong>, <strong>Transform</strong>, and <strong>AI Block</strong>.</p>
+        <img src="Photos/Screenshot From 2026-08-10 18-44-47.png" alt="Visual Flows" class="docs-image theme-border-yellow" />
+      </section>
+      
+      <section id="monitors" class="fade-up">
+        <h2>Monitors</h2>
+        <p>Schedule automated collection runs to continuously verify API health:</p>
+        <img src="Photos/Screenshot From 2026-08-10 18-44-17.png" alt="Monitors" class="docs-image theme-border-purple" />
+        <ol>
+          <li>Switch to the <strong>Monitors</strong> tab</li>
+          <li>Select a collection from the dropdown</li>
+          <li>Set the interval (seconds)</li>
+          <li>Click <strong>Schedule</strong> to start a recurring background monitor</li>
+        </ol>
+      </section>
+
+      <section id="ai-companion" class="fade-up">
+        <h2>AI Companion</h2>
+        <p>The built-in AI Companion uses local offline inference (llama.cpp) via the C-Core. You can write SQL queries from natural language, generate test scripts, optimize database schemas, and understand code patterns without sending your data to the cloud.</p>
+      </section>
+
+      <section id="crypto-vault" class="fade-up">
+        <h2>Crypto Vault</h2>
+        <p>Store API keys with AES-256-GCM encryption at the C level. The keys are encrypted by the C-Core and never exposed in plain text in your configuration files.</p>
+      </section>
+
+      <section id="security-hardening" class="fade-up">
+        <h2>Security Hardening</h2>
+        <p>LightBase includes a comprehensive C-level security module accessible via the Security tab and API endpoints.</p>
+        <img src="Photos/Screenshot From 2026-08-10 18-44-13.png" alt="Security Hardening" class="docs-image theme-border-red" />
+        <ul>
+          <li><strong>HMAC-SHA256 Request Signing</strong>: Sign and verify API payloads.</li>
+          <li><strong>IP Allowlist / Blocklist</strong>: Block or allow specific IPs from the Security tab.</li>
+          <li><strong>Session Token Manager</strong>: Create, validate, and revoke session tokens with TTL.</li>
+          <li><strong>Audit Trail Logger</strong>: Track all API operations in a circular buffer.</li>
+        </ul>
+      </section>
+
+      <section id="enterprise" class="fade-up">
+        <h2>Enterprise Engine</h2>
+        <p>The Enterprise Engine provides production-grade features matching platforms like Postman:</p>
+        <ul>
+          <li><strong>Collection Runner</strong>: Run entire collections with variable chaining and test execution.</li>
+          <li><strong>Data-Driven Testing</strong>: Upload CSV or JSON iteration data.</li>
+          <li><strong>CI/CD Reports</strong>: Generate JUnit XML for Jenkins/GitHub Actions.</li>
+          <li><strong>Code Snippet Generator</strong>: Generate client code in curl, python, javascript, java, go, php.</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

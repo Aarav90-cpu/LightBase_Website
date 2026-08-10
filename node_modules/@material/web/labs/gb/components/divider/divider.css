@@ -1,0 +1,4 @@
+/*!
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */@layer md.sys;@layer md.comp.divider{.divider{--color: var(--md-sys-color-outline-variant);--thickness: 1px;box-sizing:border-box;border:none;margin:unset}.divider:not(.divider-vertical){border-bottom:var(--thickness) solid var(--color);width:100%}.divider.divider-vertical{border-inline-end:var(--thickness) solid var(--color);min-height:100%}}/*# sourceMappingURL=divider.css.map */

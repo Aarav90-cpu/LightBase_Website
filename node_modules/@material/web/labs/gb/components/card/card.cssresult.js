@@ -1,0 +1,14 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+// Generated stylesheet for ./labs/gb/components/card/card.css.
+import { css } from 'lit';
+export const styles = css `/*!
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */@layer md.sys, md.comp.ripple, md.comp.focus-ring;@layer md.comp.card{.card{--container-color: transparent;--container-elevation: var(--md-sys-elevation-shadow-0);--container-shape: var(--md-sys-shape-corner-md);--outline-color: transparent;--outline-width: 0;--state-layer-color: var(--md-sys-color-on-surface)}.card:is(:hover,.hover):where(:has(.card-btn:not(:disabled,.disabled))){--container-elevation: var(--md-sys-elevation-shadow-1)}.card.card-filled{--container-color: var(--md-sys-color-surface-container-highest)}.card.card-filled:where(:disabled,.disabled){--container-color: hsl( from var(--md-sys-color-surface-container-highest) h s l / 38% )}.card.card-outlined{--container-color: var(--md-sys-color-surface);--outline-color: var(--md-sys-color-outline-variant);--outline-width: 1px}.card.card-outlined:where(:focus-within,.focus){--outline-color: var(--md-sys-color-on-surface)}.card.card-outlined:where(:disabled,.disabled){--outline-color: hsl(from var(--md-sys-color-outline) h s l / 12%)}.card.card-elevated{--container-color: var(--md-sys-color-surface-container-low);--container-elevation: var(--md-sys-elevation-shadow-1)}.card.card-elevated:is(:hover,.hover):where(:has(.card-btn:not(:disabled,.disabled))){--container-elevation: var(--md-sys-elevation-shadow-2)}.card.card-elevated:where(:disabled,.disabled){--container-color: hsl(from var(--md-sys-color-surface) h s l / 38%)}.card{display:flex;flex-direction:column;position:relative;overflow:hidden;background-color:var(--container-color);border-radius:var(--container-shape);box-shadow:var(--container-elevation);border:var(--outline-width) solid var(--outline-color)}.card .card-btn{appearance:none;background-color:rgba(0,0,0,0);border:none;outline:none;position:absolute;inset:0;color:var(--state-layer-color)}}
+`;
+export default styles.styleSheet;
+//# sourceMappingURL=card.cssresult.js.map

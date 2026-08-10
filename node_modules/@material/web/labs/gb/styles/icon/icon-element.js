@@ -1,0 +1,22 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+import { Icon as IconBase } from '../../../../icon/internal/icon.js';
+import { adoptStyles } from '../adopt-styles.js';
+import iconStyles from './md-icon.css' with { type: 'css' }; // github-only
+// import iconStyles from './md-icon.cssresult.js'; // google3-only
+/**
+ * A Material Design icon component.
+ */
+export class IconElement extends IconBase {
+    connectedCallback() {
+        super.connectedCallback();
+        // Adopt stylesheet to ensure global CSS @property variables are registered.
+        adoptStyles(this, iconStyles);
+        this.classList.add('md-icon');
+    }
+}
+IconElement.styles = [iconStyles];
+//# sourceMappingURL=icon-element.js.map

@@ -1,0 +1,14 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+// Generated stylesheet for ./labs/gb/styles/color/md-color-tokens.css.
+import { css } from 'lit';
+export const styles = css `/*!
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */@layer md.sys.color{:root{color-scheme:light dark;--md-sys-color-primary: light-dark(#6750a4, #d0bcff);--md-sys-color-on-primary: light-dark(#fff, #381e72);--md-sys-color-primary-container: light-dark(#eaddff, #4f378b);--md-sys-color-on-primary-container: light-dark(#4f378b, #eaddff);--md-sys-color-primary-fixed: #eaddff;--md-sys-color-primary-fixed-dim: #d0bcff;--md-sys-color-on-primary-fixed: #21005d;--md-sys-color-on-primary-fixed-variant: #4f378b;--md-sys-color-secondary: light-dark(#625b71, #ccc2dc);--md-sys-color-on-secondary: light-dark(#fff, #332d41);--md-sys-color-secondary-container: light-dark(#e8def8, #4a4458);--md-sys-color-on-secondary-container: light-dark(#4a4458, #e8def8);--md-sys-color-secondary-fixed: #e8def8;--md-sys-color-secondary-fixed-dim: #ccc2dc;--md-sys-color-on-secondary-fixed: #1d192b;--md-sys-color-on-secondary-fixed-variant: #4a4458;--md-sys-color-tertiary: light-dark(#7d5260, #efb8c8);--md-sys-color-on-tertiary: light-dark(#fff, #492532);--md-sys-color-tertiary-container: light-dark(#ffd8e4, #633b48);--md-sys-color-on-tertiary-container: light-dark(#633b48, #ffd8e4);--md-sys-color-tertiary-fixed: #ffd8e4;--md-sys-color-tertiary-fixed-dim: #efb8c8;--md-sys-color-on-tertiary-fixed: #31111d;--md-sys-color-on-tertiary-fixed-variant: #633b48;--md-sys-color-error: light-dark(#b3261e, #f2b8b5);--md-sys-color-on-error: light-dark(#fff, #601410);--md-sys-color-error-container: light-dark(#f9dedc, #8c1d18);--md-sys-color-on-error-container: light-dark(#8c1d18, #f9dedc);--md-sys-color-surface: light-dark(#fef7ff, #141218);--md-sys-color-surface-dim: light-dark(#ded8e1, #141218);--md-sys-color-surface-bright: light-dark(#fef7ff, #3b383e);--md-sys-color-surface-container-lowest: light-dark(#fff, #0f0d13);--md-sys-color-surface-container-low: light-dark(#f7f2fa, #1d1b20);--md-sys-color-surface-container: light-dark(#f3edf7, #211f26);--md-sys-color-surface-container-high: light-dark(#ece6f0, #2b2930);--md-sys-color-surface-container-highest: light-dark(#e6e0e9, #36343b);--md-sys-color-on-surface: light-dark(#1d1b20, #e6e0e9);--md-sys-color-on-surface-variant: light-dark(#49454f, #cac4d0);--md-sys-color-outline: light-dark(#79747e, #938f99);--md-sys-color-outline-variant: light-dark(#cac4d0, #49454f);--md-sys-color-inverse-surface: light-dark(#322f35, #e6e0e9);--md-sys-color-inverse-on-surface: light-dark(#f5eff7, #322f35);--md-sys-color-inverse-primary: light-dark(#d0bcff, #6750a4);--md-sys-color-scrim: #000;--md-sys-color-shadow: #000}}
+`;
+export default styles.styleSheet;
+//# sourceMappingURL=md-color-tokens.cssresult.js.map

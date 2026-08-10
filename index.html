@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LightBase — The Local-First API Studio</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  <link href="node_modules/material-icons/iconfont/material-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "./node_modules/@material/web/",
+        "lit": "./node_modules/lit/index.js",
+        "lit/": "./node_modules/lit/",
+        "lit-html": "./node_modules/lit-html/lit-html.js",
+        "lit-html/": "./node_modules/lit-html/",
+        "lit-element/": "./node_modules/lit-element/index.js",
+        "lit-element/": "./node_modules/lit-element/",
+        "@lit/reactive-element": "./node_modules/@lit/reactive-element/reactive-element.js",
+        "@lit/reactive-element/": "./node_modules/@lit/reactive-element/",
+        "@lit/task": "./node_modules/@lit/task/index.js",
+        "@lit/task/": "./node_modules/@lit/task/",
+        "@lit/context": "./node_modules/@lit/context/index.js",
+        "@lit/context/": "./node_modules/@lit/context/",
+        "tslib": "./node_modules/tslib/tslib.es6.js"
+      }
+    }
+  </script>
+  
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <span class="material-icons logo-icon">speed</span>
+      <span class="logo-text">LightBase</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="docs.html">Documentation</a>
+      <a href="https://github.com/Aarav90-cpu/LightBase" target="_blank">GitHub</a>
+      <div class="header-button">
+        <md-filled-button href="docs.html">Get Started</md-filled-button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero fade-up">
+    <h1 class="gradient-text">A local-first, multi-protocol API development platform</h1>
+    <p>Powered by a native C-Core engine with enterprise-grade security hardening. No cloud sync, no accounts, just pure performance. Customize your experience with beautiful color themes.</p>
+    
+    <div class="hero-actions">
+      <div class="button-wrapper">
+        <md-filled-button href="docs.html">
+          Read the Docs
+          <span class="material-icons" slot="icon">arrow_forward</span>
+        </md-filled-button>
+      </div>
+      <div class="button-wrapper">
+        <md-outlined-button href="https://github.com/Aarav90-cpu/LightBase" target="_blank">
+          View on GitHub
+          <span class="material-icons" slot="icon">code</span>
+        </md-outlined-button>
+      </div>
+    </div>
+
+    <div class="badges">
+      <div class="badge theme-blue"><span class="material-icons">memory</span> C99 Engine</div>
+      <div class="badge theme-red"><span class="material-icons">security</span> Hardened Kernel</div>
+      <div class="badge theme-green"><span class="material-icons">flight_takeoff</span> Zero-Cloud</div>
+    </div>
+  </section>
+
+  <!-- Feature Spotlight 1 -->
+  <section class="spotlight slide-in-left">
+    <div class="spotlight-content">
+      <div class="feature-icon theme-blue"><span class="material-icons">api</span></div>
+      <h2 class="section-title">Multi-Protocol API Studio</h2>
+      <p>REST, GraphQL, WebSocket, gRPC, and MQTT — all in one unified, high-performance tool. Effortlessly build, test, and debug across protocols.</p>
+      <ul class="feature-bullets">
+        <li><span class="material-icons check">check_circle</span> Built-in Echo Service for debugging</li>
+        <li><span class="material-icons check">check_circle</span> GraphQL with schema-aware responses</li>
+        <li><span class="material-icons check">check_circle</span> Code Snippet Generator in 6 languages</li>
+      </ul>
+    </div>
+    <div class="spotlight-image-container theme-border-blue">
+      <img src="Photos/Screenshot From 2026-08-10 17-43-12.png" alt="Multi-Protocol API Studio" class="spotlight-image" />
+    </div>
+  </section>
+
+  <!-- Feature Spotlight 2 -->
+  <section class="spotlight slide-in-right reverse">
+    <div class="spotlight-content">
+      <div class="feature-icon theme-green"><span class="material-icons">bolt</span></div>
+      <h2 class="section-title">Real-Time Dashboard & Telemetry</h2>
+      <p>Monitor your performance with sub-millisecond accuracy. Powered by a native C99 backend with OpenSSL TLS, arena memory allocators, and lock-free thread pools.</p>
+      <ul class="feature-bullets">
+        <li><span class="material-icons check">check_circle</span> Local SQLite queries in ~750 µs</li>
+        <li><span class="material-icons check">check_circle</span> IPC roundtrip in ~1.2 ms</li>
+        <li><span class="material-icons check">check_circle</span> Zero-overhead mmap telemetry</li>
+      </ul>
+    </div>
+    <div class="spotlight-image-container theme-border-green">
+      <img src="Photos/Screenshot From 2026-08-10 17-27-13.png" alt="Dashboard and Telemetry" class="spotlight-image" />
+    </div>
+  </section>
+
+  <!-- Feature Spotlight 3 -->
+  <section class="spotlight slide-in-left">
+    <div class="spotlight-content">
+      <div class="feature-icon theme-yellow"><span class="material-icons">account_tree</span></div>
+      <h2 class="section-title">Visual Flow Builder</h2>
+      <p>Chain requests, conditions, and JavaScript transforms into complex automated workflows visually. Integrate AI inference blocks directly into your pipeline.</p>
+      <ul class="feature-bullets">
+        <li><span class="material-icons check">check_circle</span> Drag-and-drop node orchestration</li>
+        <li><span class="material-icons check">check_circle</span> Advanced condition routing</li>
+        <li><span class="material-icons check">check_circle</span> Local AI blocks using llama.cpp</li>
+      </ul>
+    </div>
+    <div class="spotlight-image-container theme-border-yellow">
+      <img src="Photos/Screenshot From 2026-08-10 18-44-47.png" alt="Visual Flow Builder" class="spotlight-image" />
+    </div>
+  </section>
+
+  <!-- Feature Spotlight 4 -->
+  <section class="spotlight slide-in-right reverse">
+    <div class="spotlight-content">
+      <div class="feature-icon theme-red"><span class="material-icons">shield</span></div>
+      <h2 class="section-title">Enterprise Security Hardening</h2>
+      <p>C-level security features to protect your data. Includes HMAC-SHA256 signing, Token Bucket Rate Limiter, Path Traversal Guards, and an AES-256-GCM Crypto Vault.</p>
+      <ul class="feature-bullets">
+        <li><span class="material-icons check">check_circle</span> Signing keys locked in RAM via mlock()</li>
+        <li><span class="material-icons check">check_circle</span> Core dumps disabled process-wide</li>
+        <li><span class="material-icons check">check_circle</span> IP Allowlist/Blocklist at C-level</li>
+      </ul>
+    </div>
+    <div class="spotlight-image-container theme-border-red">
+      <img src="Photos/Screenshot From 2026-08-10 18-44-13.png" alt="Security Hardening" class="spotlight-image" />
+    </div>
+  </section>
+
+  <!-- Feature Spotlight 5 -->
+  <section class="spotlight slide-in-left">
+    <div class="spotlight-content">
+      <div class="feature-icon theme-purple"><span class="material-icons">schedule</span></div>
+      <h2 class="section-title">Scheduled Monitors & Automation</h2>
+      <p>Schedule automated collection runs to continuously verify API health. Validate APIs locally before pushing to CI/CD pipelines.</p>
+      <ul class="feature-bullets">
+        <li><span class="material-icons check">check_circle</span> Continuous regression testing</li>
+        <li><span class="material-icons check">check_circle</span> Timestamped JSON test reports</li>
+        <li><span class="material-icons check">check_circle</span> Webhook alerts (Slack/Teams)</li>
+      </ul>
+    </div>
+    <div class="spotlight-image-container theme-border-purple">
+      <img src="Photos/Screenshot From 2026-08-10 18-44-17.png" alt="Scheduled Monitors" class="spotlight-image" />
+    </div>
+  </section>
+
+  <section class="architecture-section fade-up">
+    <div class="arch-container">
+      <h2 class="section-title text-center">The Architecture</h2>
+      <p class="text-center">A decoupled, high-performance design that bypasses typical web bottlenecks.</p>
+      <div class="arch-visual glass-panel">
+        <div class="arch-block">
+          <h3>Browser UI</h3>
+          <p>HTML/CSS/JS</p>
+          <p><small>Native Window / Glassmorphism</small></p>
+        </div>
+        <span class="material-icons arch-arrow">arrow_forward</span>
+        <div class="arch-block">
+          <h3>Python Bridge</h3>
+          <p>HTTP Gateway</p>
+          <p><small>Plugins & Enterprise Engine</small></p>
+        </div>
+        <span class="material-icons arch-arrow">arrow_forward</span>
+        <div class="arch-block">
+          <h3>C-Core Engine</h3>
+          <p>libcore.so (IPC)</p>
+          <p><small>TLS, SQLite, Security, Git</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 4rem; color: var(--md-sys-color-secondary);">
+    <p>Built with <span class="material-icons" style="color: var(--md-sys-color-error); font-size: 1rem; vertical-align: middle;">favorite</span> for the LightBase project.</p>
+  </footer>
+
+</body>
+</html>
